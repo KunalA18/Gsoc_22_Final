@@ -1,24 +1,30 @@
 ## Project Details
 
 `Contributor name:` Kunal Agarwal   
-`Mentors:` Paul Elder, Laurent Pinchart, Kieren Bingham  
+
+`Mentors:` Paul Elder, Laurent Pinchart, Kieren Bingham 
+
 `Organization:` libcamera   
+
 `Project:` A GPU-based software ISP implementation
 
 ## Aim of the project
 
 - To test and create an interface within the simple pipeline handler, replacing the existing converter, for GPU-based software ISP.
+
 - To implement and add ISP functions/algorithms to the software ISP using OpenGL Compute Shaders
 
 ## Overview and Work done
 
 - Interface for GPU processing was created by replacing the existing converter by my GL converter. It involved use of GBM for creating, exporting and allocating buffers.
+
 ### What is GBM?    
 Generic Buffer Management (GBM) is an API that provides a mechanism for allocating buffers for graphics rendering tied to Mesa. GBM is intended to be used as a native platform for EGL on DRM or openwfd. The handle it creates can be used to initialize EGL and to create render target buffers
 
 - Existing converter used V4L2 API for most of the task, which had to be and was replaced. Appropriate way to import and allocate buffers was researched and asked on upstream channels, which involved use of specific API calls.
 
 - Appropriate OpenGL API and its version, for the project was explored and used, which was compatible with libcamera and the hardware I was working on(RaspberryPi 4). i.e. OpenGL ES
+
 - Egl api was explored and used to create a non-windowing system and surface less context for rendering.
 
 ### What is OpenGL ES and EGL?    
@@ -28,8 +34,11 @@ We have used OpenGL ES3 in our GL converter
 EGL is an interface between Khronos rendering APIs (such as OpenGL, OpenGL ES or OpenVG) and the underlying native platform windowing system. EGL handles graphics context management, surface/buffer binding, rendering synchronization, and enables "high-performance, accelerated, mixed-mode 2D and 3D rendering using other Khronos APIs
 
 - The goal of zero-copy of data was achieved by use of dmabufs, importing image and texture using dmabufs. It involved tackling issues like proper formats for buffers (limitation of GBM), creating egl image with proper configuration and exporting texture handles.
+
 - Texture and shader classes were implemented for handling them, with proper classes and functions.
+
 - Malvar-he-cutler demosaicing algorithm was understood in depth and changed for RAW-10 format instead of the existing one for RAW-8 format. Also got the shader for demosacing working with qcam. A patch got merged for the same
+
 - Testing shaders were written using GLSL for debugging and getting the interface working
 
 ## Contributions
@@ -65,6 +74,7 @@ cd build/src/qcam
 ## Future prospects
 
 - Create a library for the GPU based ISP to be used by any pipeline handler using the implemented GL converter and associated classes.
+
 - Add other ISP algorithms like Black-level correction, Auto-white balance and so on to our GPU based ISP.
 
 ## Conclusion
