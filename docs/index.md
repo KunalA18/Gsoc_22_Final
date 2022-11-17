@@ -54,6 +54,8 @@ A [pad](https://pad.libcamera.org/code/#/2/code/edit/PQ4jhJAUUG+b97uPfqMfX8gR/) 
 All the development was done in my [github repository](https://github.com/KunalA18/libcamera-gsoc/tree/kunal-dev)   
 I have my implementation in `src/libcamera/pipeline/simple/`
 
+Testing and Debugging was done by creating different branches like `cache-manage`, `legacyGL`, `eglImage-sizetest` and on my branch `kunal-dev`
+
 Referring to [here](https://libcamera.org/getting-started.html), The dependent packages are required for building libcamera. I have put my GSoC work into the branch named kunal-dev. Then you can fetch the kunal-dev branch, build and install using below commands:
 
 Build instructions:
