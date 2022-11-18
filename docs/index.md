@@ -81,7 +81,7 @@ The Linux DRM (Direct Rendering Manager) interface (which is also implemented on
   
   - Found out that manipulating the configuration/attributes of eglImage, affects the black square or line which was getting displayed
   
-  - Investigated the difference between a Renderbuffer and a Texture buffer.
+  - Investigated the difference between a Renderbuffer and a Texture buffer, and concluded that Textures are apt for our use which involves use of shaders.
 
 There are commit links for all the tests in the `pad` and `doc` with results and additional info, whose links are shared below.
 
@@ -128,4 +128,4 @@ cd build/src/qcam
 
 ## Conclusion
 
-I had a great time working with everyone at libcamera. I would like to especially thank my mentors, **Laurent Pinchart** and **Paul ELder** for their constant support and motivation. I'd also like to thank **Kieren Bingham** for guiding me during the last phase of the project. It was indeed an important and challenging project. I learned a lot during this journey, from writing good quality code to techniques for debugging code at low level. I appreciate the fact that mistakes made by me were returned with concise criticism rather than being reprimanded for them. I will continue to work on this project further and continue being a part of the libcamera community.
+I had a great time working with everyone at libcamera. I would like to especially thank my mentors, **Laurent Pinchart** and **Paul Elder** for their constant support and motivation. I'd also like to thank **Kieren Bingham** for guiding me during the last phase of the project. It was indeed an important and challenging project. I learned a lot during this journey, from writing good quality code to techniques for debugging code at low level. I appreciate the fact that mistakes made by me were returned with concise criticism rather than being reprimanded for them. I will continue to work on this project further and continue being a part of the libcamera community.
