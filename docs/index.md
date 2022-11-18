@@ -83,7 +83,7 @@ The Linux DRM (Direct Rendering Manager) interface (which is also implemented on
   
   - Investigated the difference between a Renderbuffer and a Texture buffer, and concluded that Textures are apt for our use which involves use of shaders.
 
-There are commit links for all the tests in the `pad` and `doc` with results and additional info, whose links are shared below.
+There are commit links for all the tests in the `doc` with results and additional info, whose links are shared below.
 
 ## Contributions
 
@@ -92,8 +92,8 @@ All the submitted patches can be seen [here](https://patchwork.libcamera.org/pro
 
 ### Progress tracker
 
-A [pad](https://pad.libcamera.org/code/#/2/code/edit/PQ4jhJAUUG+b97uPfqMfX8gR/) and [doc](https://docs.google.com/document/d/1TC_eCvXlilo2jxdJkw_JjTwy8ZhDDd55QYaZ9mEBpSo/edit) was made to track the progress.    
-The pad contains information about each test performed and its outcome, with links to the commits leading to that test. The images/videos of those tests are in the doc with additional information.
+A [doc](https://docs.google.com/document/d/1TC_eCvXlilo2jxdJkw_JjTwy8ZhDDd55QYaZ9mEBpSo/edit) was made to track the progress.    
+The doc contains information about each test performed and its outcome, with links to the commits leading to that test. The images/videos of those tests are also included the doc with additional information.
 
 ### Github Repository
 All the development was done in my [github repository](https://github.com/KunalA18/libcamera-gsoc/tree/kunal-dev)   
